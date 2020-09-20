@@ -168,7 +168,7 @@
         <section class="special_area p_100">
         	<div class="container">
         		<div class="main_title">
-        			<h2>Account Details</h2>
+                            <h2>Account Details</h2>
                                  <%
         String username=request.getParameter("username");                             
         String firstname=request.getParameter("firstname");
@@ -188,17 +188,23 @@
    
     %> 
          
-    <center><br><h3 style="color:lightseagreen">Welcome!  <%=firstname%> </h3></center>
+    <br><h3 style="color:lightseagreen">Welcome! &nbsp; <%=firstname%> </h3>
 
         			   <br>
-                                   
-                                        <h4>First Name:<%=firstname%></h4><br>
-					<h4>Last Name:<%=lastname%></h4><br>
-					<h4>Email:<%=email%></h4><br>
-					<h4>Address:<%=address%></h4><br>
-					<h4>Contact Number:<%=contactnumber%></h4><br>
+                                   <table>  
+                                   <tr><td><h4>First Name: &nbsp;<%=firstname%></h4></td>
+                                       </tr>
+                                   <tr><td><h4>Last Name : &nbsp; <%=lastname%></h4></td>
+                                           </tr>
+                                   <tr><td><h4>Email :&nbsp;     <%=email%></h4></td>
+                                       </tr>
+                                   <tr><td><h4>Address: &nbsp;   <%=address%></h4></td>
+                                       </tr>
+                                   <tr><td><h4>Contact No :&nbsp; <%=contactnumber%></h4></td>
+                                     </tr>
 					
-					
+                                   </table>
+                                       
         		</div>
         		
         	</div>
