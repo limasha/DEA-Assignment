@@ -183,7 +183,7 @@
 
                     <div class="form-group">
                         <label for="price">Price (in USD)</label>
-                        <input class="form-control item" type="text" name="price" required="">
+                        <input class="form-control item" type="number" name="price" required="">
                     </div>
 
                     <div class="form-group">
