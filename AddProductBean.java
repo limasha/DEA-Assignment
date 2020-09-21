@@ -1,7 +1,8 @@
 import java.io.Serializable;
 public class AddProductBean implements Serializable
 {
-   String itemid,itemname,price,description;
+   String itemid,itemname,description;
+   float price;
 
     public AddProductBean() 
     {
@@ -15,7 +16,7 @@ public class AddProductBean implements Serializable
         return itemname;
     }
 
-    public String getPrice() {
+    public float getPrice() {
         return price;
     }
 
@@ -31,7 +32,7 @@ public class AddProductBean implements Serializable
         this.itemname = itemname;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 
