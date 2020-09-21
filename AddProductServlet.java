@@ -71,7 +71,7 @@ public class AddProductServlet extends HttpServlet {
            try (PrintWriter out = response.getWriter()) {
        String itemid=request.getParameter("itemid");
        String itemname=request.getParameter("itemname");
-       String price=request.getParameter("price");
+       float price=Float.parseFloat(request.getParameter("price"));
        String description=request.getParameter("description");
        String image=request.getParameter("image");
        
@@ -82,7 +82,7 @@ public class AddProductServlet extends HttpServlet {
          String url="jdbc:mysql://localhost:3306/productdb";
          Connection con=DriverManager.getConnection(url,"root","");
          String sql;
-           sql = "INSERT INTO product  VALUES('"+itemid+"', '"+itemname+"' ,'"+price+"', '"+description+"', '"+image+"')";
+           sql = "INSERT INTO product  VALUES('"+itemid+"', '"+itemname+"' , '"+description+"', '"+image+"','"+price+"')";
           Statement st=con.createStatement();
          st.executeUpdate(sql);
         RequestDispatcher rd = request.getRequestDispatcher("MyProduct.jsp");
