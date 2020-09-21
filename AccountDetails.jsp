@@ -168,28 +168,38 @@
         <section class="special_area p_100">
         	<div class="container">
         		<div class="main_title">
-                            <h2>Account Details</h2>
-                                 <%
-        String username=request.getParameter("username");                             
-        String firstname=request.getParameter("firstname");
-        String lastname=request.getParameter("lastname");
-        String email=request.getParameter("email");
-        String address=request.getParameter("address");
-        String contactnumber=request.getParameter("contactnumber");
+                <center>            <h2>Account Details</h2>
+      <%! String username;
+          String firstname;
+          String lastname;
+          String email;
+          String address;
+          int contactnumber;
+       %> 
+       <%
+        
         
          String driver="com.mysql.jdbc.Driver";
          Class.forName(driver);
         
          String url="jdbc:mysql://localhost:3306/userdb";
           Connection con=DriverManager.getConnection(url,"root","");
-         String sql="select * from user where username ='"+username+"'";
+         String sql="select * from user ";
          Statement st=con.createStatement();
-         ResultSet results=st.executeQuery(sql);
+         ResultSet rs=st.executeQuery(sql);
+         while(rs.next())
+                 {
+                     firstname=rs.getString("firstname");
+                     lastname=rs.getString("lastname");
+                     email=rs.getString("email");
+                     address=rs.getString("address");
+                     contactnumber=rs.getInt("contactnumber");
+                 }
    
     %> 
          
     <br><h3 style="color:lightseagreen">Welcome! &nbsp; <%=firstname%> </h3>
-
+     <form action="home.jsp" method="post">
         			   <br>
                                    <table>  
                                    <tr><td><h4>First Name: &nbsp;<%=firstname%></h4></td>
@@ -202,9 +212,12 @@
                                        </tr>
                                    <tr><td><h4>Contact No :&nbsp; <%=contactnumber%></h4></td>
                                      </tr>
-					
+                                     
                                    </table>
-                                       
+                                    
+                                  <input style="color:blue" type="submit" value="  Home  " name="home">
+                            <form>
+                                </center>
         		</div>
         		
         	</div>
