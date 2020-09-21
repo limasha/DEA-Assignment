@@ -46,9 +46,7 @@ class ProductDb {
             rs = st.executeQuery(query);
             while(rs.next())
         {
-            items.add(rs.getString("Product_ID"));
             items.add(rs.getString("Product_Name"));
-            items.add(rs.getString("Product_Image"));
             items.add(rs.getString("Product_Price"));
             items.add(rs.getString("Product_Description"));
         }
