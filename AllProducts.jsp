@@ -178,7 +178,7 @@
                            
        <%! String itemid;
           String itemname;
-          String price;
+          float price;
           String description;
           String image;
        %>                     
@@ -199,7 +199,7 @@
                  {
                      itemid=rs.getString("itemid");
                      itemname=rs.getString("itemname");
-                     price=rs.getString("price");
+                     price=rs.getFloat("price");
                      description=rs.getString("description");
                      %>
                      <div class="col-lg-3 col-md-4 col-6">
@@ -212,7 +212,9 @@
 								<h4>$ <%=price%></h4>
 								<h3> <%=itemname%></h3>
                                                                   
-                                                                <a class="pest_btn" href="#">Add to cart</a>
+                                                                <form action="AddtoCart.jsp" method="post">
+                                                                    <input style="color:black" type="submit" value="Add To Cart " name="addtocart">
+                                                                </form>
 							</div>
 						</div>
                                                                 
@@ -222,7 +224,7 @@
     
     
     
-    %> 
+     
        
        
                                            
