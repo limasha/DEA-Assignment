@@ -47,8 +47,8 @@ class ProductDb {
             while(rs.next())
         {
             items.add(rs.getString("Product_Name"));
-            items.add(rs.getString("Product_Price"));
             items.add(rs.getString("Product_Description"));
+            items.add(rs.getString("Product_Price"));
         }
         } catch (SQLException ex) {
             Logger.getLogger(ProductDb.class.getName()).log(Level.SEVERE, null, ex);
