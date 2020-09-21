@@ -73,9 +73,9 @@ public class InsertItem_Servlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String product_name=request.getParameter("pname");
-        String product_image=request.getParameter("fileimage");
         float product_price=Float.parseFloat(request.getParameter("pprice"));
         String product_description=request.getParameter("pdescription");
+        String product_image=request.getParameter("fileimage");
         
         ProductDb p=new ProductDb();
         p.addProduct(product_name, product_image, product_price, product_description);
