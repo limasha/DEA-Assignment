@@ -65,7 +65,7 @@
 							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
 						</ul>
 						<ul class="h_search list_style">
-							<li class="shop_cart"><a href="#"><i class="lnr lnr-cart"></i></a></li>
+							<li class="shop_cart"><a href="cart.html"><i class="lnr lnr-cart"></i></a></li>
 							<li><a class="popup-with-zoom-anim" href="#test-search"><i class="fa fa-search"></i></a></li>
 						</ul>
 					</div>
