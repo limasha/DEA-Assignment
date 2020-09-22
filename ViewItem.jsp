@@ -220,12 +220,15 @@
         			        <p><%out.println(it.next());%></p>
         			        <h5>Price :<span><%out.println(it.next()); %></span></h5>          
                                                     
-                                                  
+                                        <center>  
         					<div class="quantity_box">
-        					<button action="Update.jsp" class="pink_more" href="#" >Update</button>
-							<button action="Delete.jsp" class="pink_more" href="#" >Delete</button>
-        						
-        					
+                                                <form action="UpdateItem.jsp">
+                                                    <input type="submit" value="Updata">
+                                                </form>
+                                                <form action="DeleteItem.jsp">
+        				        <input type="submit" value="Updata">
+                                                </form>
+                                        </center>
         				</div>
         			</div>
         		</div>
