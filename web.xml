@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>CartDetails</servlet-name>
-        <servlet-class>CartDetails</servlet-class>
+        <servlet-name>AddMessage</servlet-name>
+        <servlet-class>AddMessage</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddMessageServlet</servlet-name>
+        <servlet-class>AddMessageServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddCommentServlet</servlet-name>
+        <servlet-class>MyPackage.AddCommentServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>CartDetails</servlet-name>
-        <url-pattern>/CartDetails</url-pattern>
+        <servlet-name>AddMessage</servlet-name>
+        <url-pattern>/AddMessage</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddMessageServlet</servlet-name>
+        <url-pattern>/AddMessageServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddCommentServlet</servlet-name>
+        <url-pattern>/AddCommentServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
