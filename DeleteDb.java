@@ -3,7 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package productdeletepakage;
+
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -19,14 +20,23 @@ import java.util.logging.Logger;
 class DeleteDb {
     Statement st;
 
-    void deleteItem(String product_id) {
+    int deleteItem(String product_id) {
         connectToDb();
-        String deletequery="DELETE FROM product_table WHERE Product_ID="+product_id+" ";
+        String deletequery="DELETE FROM product WHERE itemid="+product_id+" ";
         try {
-            st.executeUpdate(deletequery);
+            int a=st.executeUpdate(deletequery);
+            if(a==1)
+            {
+                return a;
+            }
+            else
+            {
+                return a;
+            }
         } catch (SQLException ex) {
             Logger.getLogger(DeleteDb.class.getName()).log(Level.SEVERE, null, ex);
         }
+        return 0;
     }
 
     private void connectToDb() {
