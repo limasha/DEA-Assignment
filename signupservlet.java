@@ -98,7 +98,7 @@ public class signupservlet extends HttpServlet {
  
         String driver="com.mysql.jdbc.Driver";
          Class.forName(driver);
-         String url="jdbc:mysql://localhost:3306/userdb1";
+         String url="jdbc:mysql://localhost:3306/userdb";
          Connection con=DriverManager.getConnection(url,"root","");
          String sql= "INSERT INTO user  VALUES('"+firstname+"', '"+lastname+"' , '"+email+"', '"+username+"','"+password+"','"+address+"',"+contactnumber+")";
          Statement st=con.createStatement();
