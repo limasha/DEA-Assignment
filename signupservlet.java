@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+package servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,6 +13,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -77,7 +78,7 @@ public class signupservlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        // processRequest(request, response);
-       try (PrintWriter out = response.getWriter()) {
+        try (PrintWriter out = response.getWriter()) {
         String firstname = request.getParameter("firstname");
         String lastname = request.getParameter("lastname");
         String username = request.getParameter("username");
@@ -86,22 +87,25 @@ public class signupservlet extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
      
-        if(!(username.equals(""))){
-        try{
-            
-         String driver="com.mysql.jdbc.Driver";
+        if(username.equals("uniqe")){
+           RequestDispatcher rd = request.getRequestDispatcher("signupsuccess.jsp");
+                rd.forward(request,response);}
+        else
+           response.sendRedirect("signuperror.jsp");
+                
+     
+       try {
+ 
+        String driver="com.mysql.jdbc.Driver";
          Class.forName(driver);
-         String url="jdbc:mysql://localhost:3306/userdb";
+         String url="jdbc:mysql://localhost:3306/userdb1";
          Connection con=DriverManager.getConnection(url,"root","");
          String sql= "INSERT INTO user  VALUES('"+firstname+"', '"+lastname+"' , '"+email+"', '"+username+"','"+password+"','"+address+"',"+contactnumber+")";
          Statement st=con.createStatement();
          st.executeUpdate(sql);
          
-        
-        
-          
-       
-    }
+           
+       }
        catch(ClassNotFoundException | SQLException ex){
          out.println(ex);
        }
@@ -109,8 +113,14 @@ public class signupservlet extends HttpServlet {
         
     }
     }
-}
+         
+    
+    
+    
+
             
+            
+      
             
       
         
