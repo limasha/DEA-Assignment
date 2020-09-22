@@ -177,7 +177,7 @@
                   <form action="DeleteItem_Servlet" method="post">
                     
                     <div class="form-group">
-                        <label for="name">Enter Product Name </label>
+                        <label for="name">Enter Product ID </label>
                         <input class="form-control item" type="text" name="pid" required="">
                     </div>
            
