@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -75,6 +76,8 @@ public class AddProductServlet extends HttpServlet {
        String description=request.getParameter("description");
        String image=request.getParameter("image");
        
+       
+       
          if(!(itemid.equals("")))
        { try{
          String driver="com.mysql.jdbc.Driver";
@@ -85,15 +88,22 @@ public class AddProductServlet extends HttpServlet {
            sql = "INSERT INTO product  VALUES('"+itemid+"', '"+itemname+"' , '"+description+"', '"+image+"','"+price+"')";
           Statement st=con.createStatement();
          st.executeUpdate(sql);
-        RequestDispatcher rd = request.getRequestDispatcher("MyProduct.jsp");
-        rd.forward(request,response);
+         
+        
+        
           
        
     }
        catch(ClassNotFoundException | SQLException ex){
          out.println(ex);
-       }}
-       
+       }
+       }
+       ProductDb p=new ProductDb();
+      
+        ArrayList vlist=p.viewItem();
+        request.setAttribute("item_result", vlist);
+        RequestDispatcher rd=request.getRequestDispatcher("ViewItem.jsp");
+        rd.forward(request, response);
         }
     }
 
