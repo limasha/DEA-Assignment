@@ -92,9 +92,9 @@
 										</ul>
 								</li>
 								<li><a href="AllProducts.jsp">All Product</a></li>
-								<li><a href="SignIn.jsp">Sign in</a></li>
+								<li><a href="login.jsp">Sign in</a></li>
 							
-									<li><a href="SignUp.jsp">Sign up</a></li>
+									<li><a href="SignUP.jsp">Sign up</a></li>
 									
 								<li class="dropdown submenu">
 									<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
@@ -102,6 +102,7 @@
 										<li><a href="about-us.html">About Us</a></li>
 										<li><a href="our-team.html">Our Chefs</a></li>
 										<li><a href="testimonials.html">Testimonials</a></li>
+                                                                                
 									</ul>
 								</li>
 							</ul>
@@ -114,7 +115,8 @@
 											<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Gallery</a>
 											
 										</li>
-										<li><a href="faq.html">Faq</a></li>
+                                                                                <li><a href="faq.html">Faq</a></li>
+										<li><a href="OurBakeryItems.jsp">our Bakery Items</a></li>
 										<li><a href="what-we-make.html">What we make</a></li>
 										<li><a href="special.html">Special Recipe</a></li>
 										
@@ -129,7 +131,7 @@
 										<li><a href="AddProduct.jsp">Add Product</a></li>
                                                                                 <li><a href="shop.html">Main shop</a></li>
 										<li><a href="Cart.jsp">Cart Page</a></li>
-										<li><a href="Checkout.jsp">Checkout Page</a></li>
+										<li><a href="checkout.html">Checkout Page</a></li>
 									</ul>
 								</li>
 								<li><a href="contact.html">Contact Us</a></li>
