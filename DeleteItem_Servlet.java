@@ -3,7 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package productdeletepakage;
+
+
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -73,7 +74,16 @@ public class DeleteItem_Servlet extends HttpServlet {
         String product_id=request.getParameter("pid");
         
         DeleteDb d=new DeleteDb();
-        d.deleteItem(product_id);
+        int a=d.deleteItem(product_id);
+        if(a==1)
+        {
+            response.sendRedirect("Home.jsp");
+        }
+        else
+        {
+            response.sendRedirect("Error.jsp");
+        }
+        
     }
 
     /**
