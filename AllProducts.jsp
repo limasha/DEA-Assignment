@@ -202,7 +202,9 @@
                      price=rs.getFloat("price");
                      description=rs.getString("description");
                      %>
+                     
                      <div class="col-lg-3 col-md-4 col-6">
+                         <div>
 						<div class="cake_feature_item">
 							<div class="cake_img">
 					
@@ -217,7 +219,7 @@
                                                                 </form>
 							</div>
 						</div>
-                                                                
+                                                                </div>                  
 					</div>
                 <% }%>
        
