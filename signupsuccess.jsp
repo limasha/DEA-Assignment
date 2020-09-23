@@ -51,7 +51,7 @@
         		<div class="error_inner">
 					<div class="error_inner_text">
 						<h3>WELCOME</h3>
-						<h4>Your registration has been successful.</h4>
+						<h4>Your registration has been successful</h4>
 						<h5>Please Check your email for details</h5>
 						<a class="pink_btn"  href="index.html">Go to home page</a>
 					</div>
