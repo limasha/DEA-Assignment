@@ -178,22 +178,22 @@
                     
                     <div class="form-group">
                         <label for="name">Name of the item </label>
-                        <input class="form-control item" type="text" name="pname" required="">
+                        <input class="form-control item" type="text" name="itemname" required="">
                     </div>
            
                     <div class="form-group">
                         <label for="price">Price (in USD)</label>
-                        <input class="form-control item" type="text" name="pprice" required="">
+                        <input class="form-control item" type="text" name="price" required="">
                     </div>
 
                     <div class="form-group">
                         <label for="details">Description</label>
-                        <input class="form-control item" type="text" name="pdescription" required="" >
+                        <input class="form-control item" type="text" name="description" required="" >
                     </div>
 
                     <div class="form-group">
                         <label for="email">Product Image (400px x 400px is Recommended)</label>
-                        <input class="form-control item" accept="image/*" type="file" name="fileimage" size="200" >
+                        <input class="form-control item" accept="image/*" type="file" name="image" size="200" >
                     </div>
 
                     <button class="btn btn-primary btn-block" id="addbtn"><input class="btn btn-primary btn-block" id="addbtn" type="submit" value="Add" name="add"></button><br> <br>
