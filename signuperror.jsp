@@ -52,8 +52,8 @@
 					<div class="error_inner_text">
                                            
 						<h3>opps!!!</h3>
-						<h4>Your registration has been  failed.</h4>
-						<h5>Please try Again.</h5>
+						<h4>Your registration has been  failed</h4>
+						<h5>Please try Again</h5>
                                            
 						<a class="pink_btn"  href="Signup.jsp">Go to Sign up page</a>
 					</div>
