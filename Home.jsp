@@ -134,7 +134,7 @@
 										<li><a href="checkout.html">Checkout Page</a></li>
 									</ul>
 								</li>
-								<li><a href="contact.html">Contact Us</a></li>
+								<li><a href="Menu.jsp">Menu</a></li>
 							</ul>
 						</div>
 					</nav>
